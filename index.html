@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth scroll-pt-24">
+<html lang="pt-BR" class="scroll-smooth scroll-pt-24 overflow-x-hidden">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>Auto Escola Habilitar | Mombaça - CE | Aqui, você quem escolhe!</title>
   
   <!-- Favicon Redondo com a Nova Logo Oficial -->
@@ -78,33 +78,33 @@
     }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen">
+<body class="bg-slate-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen overflow-x-hidden w-full max-w-full">
 
   <!-- ==================== HEADER OFICIAL ==================== -->
-  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b-4 border-habilitar-yellow shadow-md">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20 gap-4 lg:gap-8">
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b-4 border-habilitar-yellow shadow-md w-full">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 gap-2 sm:gap-4 xl:gap-8">
         
-        <!-- Logo Oficial Habilitar -->
-        <a href="#" class="flex items-center gap-3 group flex-shrink-0" aria-label="Página Inicial Auto Escola Habilitar">
-          <div class="w-12 h-12 rounded-2xl overflow-hidden shadow-sm group-hover:scale-105 transition-transform bg-white border border-slate-200 p-0.5 flex-shrink-0">
-            <img src="logo-habilitar.jpg" alt="Logo Auto Escola Habilitar Mombaça" class="w-full h-full object-cover rounded-xl">
+        <!-- Logo Oficial Habilitar (Responsivo) -->
+        <a href="#" class="flex items-center gap-2 sm:gap-3 group min-w-0" aria-label="Página Inicial Auto Escola Habilitar">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl overflow-hidden shadow-sm group-hover:scale-105 transition-transform bg-white border border-slate-200 p-0.5 flex-shrink-0">
+            <img src="logo-habilitar.jpg" alt="Logo Auto Escola Habilitar Mombaça" class="w-full h-full object-cover rounded-lg sm:rounded-xl">
           </div>
-          <div>
+          <div class="min-w-0">
             <div class="flex items-center">
-              <span class="font-display font-black text-lg sm:text-xl xl:text-2xl tracking-tight text-habilitar-deep leading-none whitespace-nowrap">
+              <span class="font-display font-black text-sm sm:text-lg xl:text-xl tracking-tight text-habilitar-deep leading-tight truncate">
                 AUTO ESCOLA HABILITAR
               </span>
-              <span class="w-2.5 h-2.5 rounded-full bg-habilitar-yellow ml-1 flex-shrink-0"></span>
+              <span class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-habilitar-yellow ml-1 flex-shrink-0"></span>
             </div>
-            <span class="text-[9px] sm:text-[10px] uppercase tracking-wider text-slate-500 font-bold block mt-0.5 whitespace-nowrap">
+            <span class="text-[8px] sm:text-[10px] uppercase tracking-wider text-slate-500 font-bold block mt-0.5 truncate">
               CFC Mombaça - CE • Aqui, você quem escolhe!
             </span>
           </div>
         </a>
 
-        <!-- Menu Desktop: Espaçamento equilibrado sem quebra de linha -->
-        <nav class="hidden lg:flex items-center justify-center gap-6 xl:gap-8 text-xs xl:text-sm font-bold text-slate-700 whitespace-nowrap">
+        <!-- Menu Desktop (Exibido a partir de xl: 1280px para evitar colisão em 1024px) -->
+        <nav class="hidden xl:flex items-center justify-center gap-6 2xl:gap-8 text-xs 2xl:text-sm font-bold text-slate-700 whitespace-nowrap">
           <a href="#diferenciais" class="hover:text-habilitar-blue transition-colors py-1">Diferenciais</a>
           <a href="#categorias" class="hover:text-habilitar-blue transition-colors py-1">Categorias A, B e D</a>
           <a href="#depoimentos" class="hover:text-habilitar-blue transition-colors py-1">Alunos Aprovados</a>
@@ -113,25 +113,25 @@
         </nav>
 
         <!-- CTA Header com WhatsApp Oficial -->
-        <div class="hidden sm:flex items-center flex-shrink-0">
+        <div class="hidden md:flex items-center flex-shrink-0">
           <a href="https://wa.me/558821540060?text=Olá!%20Vi%20o%20site%20da%20Auto%20Escola%20Habilitar%20Mombaça%20e%20gostaria%20de%20saber%20mais%20informações." 
              target="_blank" 
              rel="noopener noreferrer"
-             class="inline-flex items-center gap-2 bg-habilitar-deep hover:bg-habilitar-navy text-white px-4 py-2.5 rounded-full font-bold text-xs xl:text-sm shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 border border-white/20 whitespace-nowrap">
-            <i class="fa-brands fa-whatsapp text-base text-emerald-400"></i>
+             class="inline-flex items-center gap-2 bg-habilitar-deep hover:bg-habilitar-navy text-white px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-full font-bold text-xs xl:text-sm shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 border border-white/20 whitespace-nowrap">
+            <i class="fa-brands fa-whatsapp text-sm sm:text-base text-emerald-400"></i>
             <span>(88) 2154-0060</span>
           </a>
         </div>
 
-        <!-- Botão Menu Mobile -->
-        <button id="mobileMenuBtn" class="lg:hidden text-habilitar-deep p-2 rounded-lg hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-habilitar-blue ml-auto sm:ml-0" aria-label="Abrir Menu">
-          <i class="fa-solid fa-bars text-2xl" id="menuIcon"></i>
+        <!-- Botão Menu Mobile (Visível até xl: 1280px) -->
+        <button id="mobileMenuBtn" class="xl:hidden text-habilitar-deep p-2 rounded-lg hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-habilitar-blue flex-shrink-0 ml-1" aria-label="Abrir Menu">
+          <i class="fa-solid fa-bars text-xl sm:text-2xl" id="menuIcon"></i>
         </button>
       </div>
     </div>
 
     <!-- Dropdown Mobile -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-slate-200 px-4 pt-3 pb-6 space-y-3 shadow-xl">
+    <div id="mobileMenu" class="hidden xl:hidden bg-white border-t border-slate-200 px-4 pt-3 pb-6 space-y-3 shadow-xl">
       <a href="#diferenciais" class="mobile-nav-link block py-2 text-slate-800 font-semibold hover:text-habilitar-blue">Diferenciais</a>
       <a href="#categorias" class="mobile-nav-link block py-2 text-slate-800 font-semibold hover:text-habilitar-blue">Categorias A, B e D</a>
       <a href="#depoimentos" class="mobile-nav-link block py-2 text-slate-800 font-semibold hover:text-habilitar-blue">Alunos Aprovados</a>

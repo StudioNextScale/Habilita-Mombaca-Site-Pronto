@@ -13,6 +13,14 @@
   <meta name="description" content="Nós prestamos o melhor serviço! Tire sua CNH nas Categorias A, B e D na Auto Escola Habilitar em Mombaça - CE. Carro manual, carro 100% elétrico, motos e ônibus.">
   <meta name="theme-color" content="#002B66">
 
+  <!-- Open Graph & WhatsApp Share Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Auto Escola Habilitar | Mombaça - CE | Aqui, você quem escolhe!">
+  <meta property="og:description" content="Nós prestamos o melhor serviço! Categorias A, B e D com carro elétrico BYD, manual, motos e ônibus próprio em Mombaça. Simule seu pacote!">
+  <meta property="og:image" content="og-banner.jpg">
+  <meta property="og:url" content="https://studionextscale.github.io/Habilita-Mombaca-Site-Pronto/">
+  <meta name="twitter:card" content="summary_large_image">
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
@@ -850,11 +858,16 @@
       document.getElementById('leadName').focus();
     }
 
-    // Máscara de Telefone Inteligente
+    // Máscara de Telefone Inteligente (Suporta colar com +55, espaços e traços)
     const phoneInput = document.getElementById('leadPhone');
     phoneInput.addEventListener('input', function(e) {
       let v = e.target.value.replace(/\D/g, '');
+      // Se colar com o DDI do Brasil (55), remove para não virar DDD 55
+      if (v.length >= 12 && v.startsWith('55')) {
+        v = v.substring(2);
+      }
       if (v.length > 11) v = v.substring(0, 11);
+      
       if (v.length > 6) {
         v = `(${v.substring(0, 2)}) ${v.substring(2, 7)}-${v.substring(7)}`;
       } else if (v.length > 2) {

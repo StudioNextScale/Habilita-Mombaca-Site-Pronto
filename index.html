@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth scroll-pt-24">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Escola Habilitar | Mombaça - CE | Transformando Alunos em Condutores Confiantes</title>
+  
+  <!-- Favicon Redondo -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  
+  <!-- SEO & Metatags -->
+  <meta name="description" content="Eleita a Melhor Autoescola de Mombaça pelo 5º ano consecutivo! Tire sua CNH nas Categorias A, B e D na Auto Escola Habilitar. Aulas em carro elétrico, frota com ar e aprovação comprovada.">
+  <meta name="theme-color" content="#F59E0B">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts: Inter & Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Montserrat', 'sans-serif'],
+          },
+          colors: {
+            habilitar: {
+              yellow: '#F59E0B',        // Amarelo dourado da marca
+              yellowHover: '#D97706',   // Amarelo escuro hover
+              royal: '#0F4C81',         // Azul Royal da logo Habilitar
+              royalDark: '#0A3357',     // Azul Profundo institucional
+              royalNavy: '#061E33',     // Azul noite para contrastes e rodapé
+              trackYellow: '#FCD34D',   // Amarelo pista do ícone central
+              whatsapp: '#25D366',      // Verde WhatsApp oficial
+              whatsappHover: '#1EBE5D'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    @keyframes pulse-whatsapp {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+      70% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+    .btn-whatsapp-pulse {
+      animation: pulse-whatsapp 2s infinite;
+    }
+
+    /* Animação suave para acordeão */
+    .faq-grid-wrapper {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .faq-grid-wrapper.is-open {
+      grid-template-rows: 1fr;
+    }
+    .faq-inner-content {
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen">
+
+  <!-- ==================== HEADER OFICIAL ==================== -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b-4 border-habilitar-yellow shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo Oficial Habilitar -->
+        <a href="#" class="flex items-center gap-3 group" aria-label="Página Inicial Auto Escola Habilitar">
+          <div class="w-12 h-12 rounded-2xl overflow-hidden shadow-sm group-hover:scale-105 transition-transform bg-white border border-slate-200 p-0.5">
+            <img src="logo-habilitar.jpg" alt="Logo Auto Escola Habilitar Mombaça" class="w-full h-full object-cover rounded-xl">
+          </div>
+          <div>
+            <div class="flex items-center">
+              <span class="font-display font-black text-2xl tracking-tight text-habilitar-royal leading-none">
+                HABILITAR
+              </span>
+              <span class="w-2.5 h-2.5 rounded-full bg-habilitar-yellow ml-1"></span>
+            </div>
+            <span class="text-[10px] uppercase tracking-widest text-slate-500 font-bold block mt-0.5">
+              CFC Mombaça - CE • Há 10 anos
+            </span>
+          </div>
+        </a>
+
+        <!-- Menu Desktop -->
+        <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-700">
+          <a href="#diferenciais" class="hover:text-habilitar-royal transition-colors">Diferenciais</a>
+          <a href="#categorias" class="hover:text-habilitar-royal transition-colors">Categorias A, B e D</a>
+          <a href="#depoimentos" class="hover:text-habilitar-royal transition-colors">Alunos Aprovados</a>
+          <a href="#faq" class="hover:text-habilitar-royal transition-colors">Dúvidas</a>
+          <a href="#contato" class="hover:text-habilitar-royal transition-colors">Localização</a>
+        </nav>
+
+        <!-- CTA Header com WhatsApp Oficial -->
+        <div class="hidden sm:flex items-center">
+          <a href="https://wa.me/558821540060?text=Olá!%20Vi%20o%20site%20da%20Auto%20Escola%20Habilitar%20Mombaça%20e%20gostaria%20de%20saber%20mais%20informações." 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 bg-habilitar-royal hover:bg-habilitar-royalDark text-white px-5 py-2.5 rounded-full font-bold text-sm shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 border border-habilitar-royal/20">
+            <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i>
+            <span>(88) 2154-0060</span>
+          </a>
+        </div>
+
+        <!-- Botão Menu Mobile -->
+        <button id="mobileMenuBtn" class="md:hidden text-habilitar-royal p-2 rounded-lg hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-habilitar-royal" aria-label="Abrir Menu">
+          <i class="fa-solid fa-bars text-2xl" id="menuIcon"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Dropdown Mobile -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-slate-200 px-4 pt-3 pb-6 space-y-3 shadow-xl">
+      <a href="#diferenciais" class="mobile-nav-link block py-2 text-slate-800 font-semibold hover:text-habilitar-royal">Diferenciais</a>
+      <a href="#categorias" class="mobile-nav-link block py-2 text-slate-800 font-semibold hover:text-habilitar-royal">Categorias A, B e D</a>
+      <a href="#depoimentos" class="mobile-nav-link block py-2 text-slate-800 font-semibold hover:text-habilitar-royal">Alunos Aprovados</a>
+      <a href="#faq" class="mobile-nav-link block py-2 text-slate-800 font-semibold hover:text-habilitar-royal">Perguntas Frequentes</a>
+      <a href="#contato" class="mobile-nav-link block py-2 text-slate-800 font-semibold hover:text-habilitar-royal">Contato & Localização</a>
+      <a href="https://wa.me/558821540060?text=Olá!%20Vi%20o%20site%20da%20Auto%20Escola%20Habilitar%20Mombaça%20e%20gostaria%20de%20saber%20mais." 
+         target="_blank" 
+         rel="noopener noreferrer"
+         class="w-full text-center flex items-center justify-center gap-2 bg-habilitar-royal text-white py-3 rounded-xl font-bold mt-2 shadow-md">
+        <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i>
+        <span>Falar no WhatsApp: (88) 2154-0060</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    
+    <!-- ==================== HERO SECTION OFICIAL ==================== -->
+    <section class="relative bg-gradient-to-br from-amber-400 via-amber-500 to-amber-600 text-slate-900 pt-10 pb-20 md:py-20 overflow-hidden border-b-4 border-habilitar-royal">
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Coluna 1: Copywriting com Dados Reais -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-habilitar-royal text-white text-xs sm:text-sm font-bold shadow-md">
+              <i class="fa-solid fa-trophy text-habilitar-trackYellow"></i>
+              <span>Melhor Autoescola de Mombaça pelo 5º ano consecutivo</span>
+            </div>
+
+            <h1 class="font-display text-3xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-habilitar-royalNavy">
+              Transformando alunos em <span class="bg-white px-3 py-0.5 rounded-xl text-habilitar-royal shadow-sm inline-block my-1">condutores confiantes!</span>
+            </h1>
+
+            <p class="text-slate-900 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
+              Há mais de 10 anos sendo a autoescola que mais aprova em Mombaça e região. Primeira da região com aulas em carro <strong>100% elétrico</strong>, frota climatizada e veículos próprios para <strong>Categorias A, B e D</strong>.
+            </p>
+
+            <!-- Badges Visuais Reais -->
+            <div class="pt-2 flex flex-wrap justify-center lg:justify-start gap-3 text-xs sm:text-sm">
+              <div class="flex items-center gap-2 bg-white/90 backdrop-blur-sm px-3.5 py-1.5 rounded-full font-bold text-slate-800 shadow-sm">
+                <i class="fa-solid fa-charging-station text-habilitar-royal"></i> Carro Elétrico & Automático
+              </div>
+              <div class="flex items-center gap-2 bg-white/90 backdrop-blur-sm px-3.5 py-1.5 rounded-full font-bold text-slate-800 shadow-sm">
+                <i class="fa-solid fa-credit-card text-habilitar-royal"></i> Em até 10x e 12x
+              </div>
+              <div class="flex items-center gap-2 bg-white/90 backdrop-blur-sm px-3.5 py-1.5 rounded-full font-bold text-slate-800 shadow-sm">
+                <i class="fa-solid fa-bus text-habilitar-royal"></i> Categoria D Própria
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Coluna 2: Formulário Inteligente -->
+          <div class="lg:col-span-5">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-2xl border-4 border-white text-slate-800 relative">
+              
+              <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-habilitar-royal text-white px-5 py-1.5 rounded-full text-xs font-black uppercase tracking-wider shadow-lg flex items-center gap-2">
+                <i class="fa-solid fa-bolt text-habilitar-yellow"></i>
+                Matrículas Abertas
+              </div>
+
+              <h2 class="font-display font-extrabold text-2xl text-slate-900 text-center mb-1 mt-2">
+                Simule seu Pacote Agora
+              </h2>
+              <p class="text-xs sm:text-sm text-slate-500 text-center mb-6">
+                Receba valores atualizados diretamente no WhatsApp da recepção!
+              </p>
+
+              <form id="leadForm" class="space-y-4" novalidate>
+                <div>
+                  <label for="leadName" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Seu Nome Completo</label>
+                  <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 text-habilitar-royal">
+                      <i class="fa-solid fa-user"></i>
+                    </span>
+                    <input type="text" id="leadName" required minlength="3" placeholder="Ex: Francisco Oliveira"
+                           class="w-full pl-10 pr-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-habilitar-royal focus:border-transparent transition-all">
+                  </div>
+                  <span id="nameError" class="text-xs text-rose-600 font-semibold hidden mt-1 block">Por favor, digite seu nome completo (mínimo 3 letras).</span>
+                </div>
+
+                <div>
+                  <label for="leadPhone" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">WhatsApp com DDD</label>
+                  <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 text-emerald-600">
+                      <i class="fa-brands fa-whatsapp text-lg"></i>
+                    </span>
+                    <input type="tel" id="leadPhone" required placeholder="(88) 99999-9999" maxlength="15"
+                           class="w-full pl-10 pr-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-habilitar-royal focus:border-transparent transition-all">
+                  </div>
+                  <span id="phoneError" class="text-xs text-rose-600 font-semibold hidden mt-1 block">Digite um número de WhatsApp válido com DDD (10 ou 11 dígitos).</span>
+                </div>
+
+                <div>
+                  <label for="leadCategory" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Qual Categoria você precisa?</label>
+                  <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 text-habilitar-royal">
+                      <i class="fa-solid fa-id-card"></i>
+                    </span>
+                    <select id="leadCategory" required
+                            class="w-full pl-10 pr-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-habilitar-royal focus:border-transparent transition-all">
+                      <option value="Categoria AB (Carro e Moto)">Categoria AB (Carro + Moto - Mais Procurada)</option>
+                      <option value="Categoria B (Carro)">Categoria B (Apenas Carro)</option>
+                      <option value="Categoria A (Moto)">Categoria A (Apenas Moto)</option>
+                      <option value="Categoria D (Ônibus, Micro e Vans)">Categoria D (Ônibus, Vans e Transporte de Passageiros)</option>
+                      <option value="Adição de Categoria">Adição de Categoria (A, B ou D)</option>
+                      <option value="Renovação de CNH">Renovação de CNH</option>
+                    </select>
+                  </div>
+                </div>
+
+                <button type="submit" 
+                        class="w-full mt-2 bg-habilitar-royal hover:bg-habilitar-royalDark text-white font-display font-extrabold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-3 text-base group">
+                  <span>RECEBER ORÇAMENTO NO WHATSAPP</span>
+                  <i class="fa-solid fa-arrow-right text-habilitar-yellow group-hover:translate-x-1 transition-transform"></i>
+                </button>
+                
+                <!-- Feedback Fallback pós-envio -->
+                <div id="formSuccessFeedback" class="hidden p-3 bg-emerald-50 border border-emerald-200 rounded-xl text-center text-xs text-emerald-800">
+                  <p class="font-bold">Redirecionando para o WhatsApp...</p>
+                  <p class="mt-1">Se a conversa não abriu automaticamente, <a id="manualWhatsappLink" href="#" target="_blank" rel="noopener noreferrer" class="underline font-bold text-emerald-900">clique aqui para conversar</a>.</p>
+                </div>
+                
+                <p class="text-xs text-center text-slate-600 font-medium flex items-center justify-center gap-1.5 mt-2">
+                  <i class="fa-solid fa-shield-halved text-emerald-600"></i> Atendimento oficial Habilitar Mombaça. Seus dados estão seguros.
+                </p>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== DIFERENCIAIS DA HABILITAR ==================== -->
+    <section id="diferenciais" class="py-16 md:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-block px-3 py-1 rounded-full bg-amber-100 text-habilitar-royalDark font-bold text-xs uppercase tracking-widest mb-3">
+            Referência Regional
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl font-black text-habilitar-royalNavy">
+            A Autoescola que mais aprova em Mombaça
+          </h2>
+          <p class="text-slate-600 mt-3 text-base sm:text-lg">
+            Reconhecida 5 anos seguidos como a melhor da cidade por quem vive e aprende aqui.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <!-- Card 1 -->
+          <div class="p-6 rounded-3xl bg-slate-50 border-2 border-slate-100 hover:border-habilitar-yellow hover:shadow-xl transition-all group flex flex-col">
+            <div class="w-14 h-14 rounded-2xl bg-amber-100 text-habilitar-royal flex items-center justify-center text-2xl mb-5 group-hover:bg-habilitar-royal group-hover:text-habilitar-yellow transition-colors">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Carro 100% Elétrico</h3>
+            <p class="text-slate-600 text-sm leading-relaxed flex-1">
+              Pioneira na região: aulas práticas em veículo elétrico e automático com ar-condicionado, máximo conforto e suavidade.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="p-6 rounded-3xl bg-slate-50 border-2 border-slate-100 hover:border-habilitar-yellow hover:shadow-xl transition-all group flex flex-col">
+            <div class="w-14 h-14 rounded-2xl bg-blue-100 text-habilitar-royal flex items-center justify-center text-2xl mb-5 group-hover:bg-habilitar-royal group-hover:text-habilitar-yellow transition-colors">
+              <i class="fa-solid fa-bus"></i>
+            </div>
+            <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Categoria D Própria</h3>
+            <p class="text-slate-600 text-sm leading-relaxed flex-1">
+              Micro-ônibus próprio da autoescola para treinar quem quer atuar no transporte de passageiros, vans ou turismo.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="p-6 rounded-3xl bg-slate-50 border-2 border-slate-100 hover:border-habilitar-yellow hover:shadow-xl transition-all group flex flex-col">
+            <div class="w-14 h-14 rounded-2xl bg-amber-100 text-habilitar-royal flex items-center justify-center text-2xl mb-5 group-hover:bg-habilitar-royal group-hover:text-habilitar-yellow transition-colors">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+            <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Ensino Humanizado</h3>
+            <p class="text-slate-600 text-sm leading-relaxed flex-1">
+              Professores experientes que acolhem o aluno, tiram o medo do volante e ensinam com respeito e paciência.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="p-6 rounded-3xl bg-slate-50 border-2 border-slate-100 hover:border-habilitar-yellow hover:shadow-xl transition-all group flex flex-col">
+            <div class="w-14 h-14 rounded-2xl bg-blue-100 text-habilitar-royal flex items-center justify-center text-2xl mb-5 group-hover:bg-habilitar-royal group-hover:text-habilitar-yellow transition-colors">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <h3 class="font-display font-bold text-lg text-slate-900 mb-2">5 Anos Consecutivos</h3>
+            <p class="text-slate-600 text-sm leading-relaxed flex-1">
+              Premiada pelos moradores e pelo Diário de Mombaça como a Autoescola Destaque do Ano por sua excelência.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== CATEGORIAS REAIS: A, B E D ==================== -->
+    <section id="categorias" class="py-16 md:py-24 bg-amber-50/50 border-y border-amber-200/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-block px-3 py-1 rounded-full bg-habilitar-royal text-white font-bold text-xs uppercase tracking-widest mb-3">
+            Habilitação Completa
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl font-black text-habilitar-royalNavy">
+            Categorias A, B e D em Mombaça
+          </h2>
+          <p class="text-slate-600 mt-3 text-base sm:text-lg">
+            Da sua primeira habilitação até a CNH profissional para dirigir veículos de passageiros.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Card Categoria AB -->
+          <div class="bg-white rounded-3xl overflow-hidden shadow-xl border-4 border-habilitar-royal flex flex-col relative transform hover:-translate-y-1 transition-all">
+            <div class="bg-habilitar-royal text-white text-xs font-black uppercase text-center py-2.5 tracking-wider flex items-center justify-center gap-2">
+              <i class="fa-solid fa-star text-habilitar-trackYellow"></i>
+              Mais Escolhida em Mombaça
+            </div>
+            <div class="p-8 flex-1 flex flex-col">
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-display text-4xl text-habilitar-royal font-black">CAT. AB</span>
+                <span class="p-3 bg-amber-100 text-habilitar-yellowHover rounded-2xl">
+                  <i class="fa-solid fa-car text-xl"></i> + <i class="fa-solid fa-motorcycle text-xl"></i>
+                </span>
+              </div>
+              <h3 class="font-display font-extrabold text-2xl text-slate-900 mb-2">Carro + Moto</h3>
+              <p class="text-slate-600 text-sm mb-6 flex-1 leading-relaxed">
+                Tire as duas categorias no mesmo processo com o Detran-CE, economizando tempo e taxas de exame médico.
+              </p>
+              <ul class="space-y-3 text-sm font-medium text-slate-700 mb-8">
+                <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-emerald-500 text-base"></i> Salas de aula teóricas climatizadas</li>
+                <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-emerald-500 text-base"></i> Aulas práticas em carros modernos</li>
+                <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-emerald-500 text-base"></i> Pista prática nos padrões de prova</li>
+                <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-emerald-500 text-base"></i> Acompanhamento nas bancas do Detran</li>
+              </ul>
+              <button onclick="selectCategoryAndScroll('Categoria AB (Carro e Moto)')" 
+                      class="w-full py-3.5 bg-habilitar-yellow hover:bg-habilitar-yellowHover text-habilitar-royalNavy font-display font-black rounded-xl text-center text-sm shadow-md transition-all">
+                SIMULAR VALOR CATEGORIA AB
+              </button>
+            </div>
+          </div>
+
+          <!-- Card Categoria D -->
+          <div class="bg-white rounded-3xl overflow-hidden shadow-xl border-4 border-amber-400 flex flex-col relative transform hover:-translate-y-1 transition-all">
+            <div class="bg-amber-400 text-habilitar-royalNavy text-xs font-black uppercase text-center py-2.5 tracking-wider flex items-center justify-center gap-2">
+              <i class="fa-solid fa-briefcase"></i>
+              Habilitação Profissional
+            </div>
+            <div class="p-8 flex-1 flex flex-col">
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-display text-4xl text-habilitar-royal font-black">CAT. D</span>
+                <span class="p-3 bg-amber-100 text-habilitar-royal rounded-2xl">
+                  <i class="fa-solid fa-bus text-xl"></i>
+                </span>
+              </div>
+              <h3 class="font-display font-extrabold text-2xl text-slate-900 mb-2">Categoria D (Passageiros)</h3>
+              <p class="text-slate-600 text-sm mb-6 flex-1 leading-relaxed">
+                Dirija ônibus, micro-ônibus e vans. Treinamento prático direto no veículo oficial da Habilitar com instrutores especializados.
+              </p>
+              <ul class="space-y-3 text-sm font-medium text-slate-700 mb-8">
+                <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-emerald-500 text-base"></i> Micro-ônibus próprio da autoescola</li>
+                <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-emerald-500 text-base"></i> Abertura de portas para o mercado de trabalho</li>
+                <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-emerald-500 text-base"></i> Transporte escolar, turismo e fretamento</li>
+              </ul>
+              <button onclick="selectCategoryAndScroll('Categoria D (Ônibus, Micro e Vans)')" 
+                      class="w-full py-3.5 bg-habilitar-royal hover:bg-habilitar-royalDark text-white font-display font-black rounded-xl text-center text-sm shadow-md transition-all">
+                CONSULTAR CATEGORIA D
+              </button>
+            </div>
+          </div>
+
+          <!-- Card Categoria A e B Individuais com Botões Claros -->
+          <div class="bg-white rounded-3xl overflow-hidden shadow-xl border-4 border-slate-200 flex flex-col hover:border-habilitar-royal transition-all">
+            <div class="bg-slate-800 text-white text-xs font-black uppercase text-center py-2.5 tracking-wider flex items-center justify-center gap-2">
+              <i class="fa-solid fa-id-card"></i>
+              Primeira CNH Individual
+            </div>
+            <div class="p-8 flex-1 flex flex-col">
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-display text-4xl text-habilitar-royal font-black">CAT. A / B</span>
+                <span class="p-3 bg-blue-50 text-habilitar-royal rounded-2xl">
+                  <i class="fa-solid fa-car text-xl"></i>
+                </span>
+              </div>
+              <h3 class="font-display font-extrabold text-2xl text-slate-900 mb-2">Carro ou Moto Individual</h3>
+              <p class="text-slate-600 text-sm mb-6 flex-1 leading-relaxed">
+                Prefere focar apenas em uma carteira? Escolha se quer iniciar com moto ou carro em horários flexíveis.
+              </p>
+              <ul class="space-y-3 text-sm font-medium text-slate-700 mb-8">
+                <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-emerald-500 text-base"></i> Aulas em carro elétrico ou convencional</li>
+                <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-emerald-500 text-base"></i> Treinamento intensivo de baliza</li>
+                <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-emerald-500 text-base"></i> Motos novas e circuito calibrado</li>
+              </ul>
+              <div class="grid grid-cols-2 gap-3 mt-auto">
+                <button onclick="selectCategoryAndScroll('Categoria A (Moto)')" 
+                        class="py-3 bg-slate-100 hover:bg-amber-500 hover:text-slate-900 text-slate-800 font-display font-bold rounded-xl text-center text-xs transition-all border border-slate-200">
+                  <i class="fa-solid fa-motorcycle mr-1"></i> SIMULAR MOTO
+                </button>
+                <button onclick="selectCategoryAndScroll('Categoria B (Carro)')" 
+                        class="py-3 bg-slate-100 hover:bg-habilitar-royal hover:text-white text-slate-800 font-display font-bold rounded-xl text-center text-xs transition-all border border-slate-200">
+                  <i class="fa-solid fa-car mr-1"></i> SIMULAR CARRO
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== PROVA SOCIAL COM ALUNOS REAIS DO INSTAGRAM ==================== -->
+    <section id="depoimentos" class="py-16 md:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-block px-3 py-1 rounded-full bg-amber-100 text-habilitar-royalDark font-bold text-xs uppercase tracking-widest mb-3">
+            Histórias Reais de Mombaça
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl font-black text-habilitar-royalNavy">
+            Alunos Aprovados na Habilitar
+          </h2>
+          <p class="text-slate-600 mt-3 text-base sm:text-lg">
+            Veja relatos de quem confiou na nossa equipe e comemorou a aprovação no Detran de Mombaça e Tauá.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Depoimento Real 1: Lívia Alves -->
+          <div class="p-7 rounded-3xl bg-slate-50 border-2 border-slate-100 shadow-sm flex flex-col justify-between hover:border-amber-300 transition-all">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-3 py-1 rounded-full bg-blue-100 text-habilitar-royal font-bold text-xs">
+                  <i class="fa-solid fa-bus mr-1"></i> Aprovada Cat. D
+                </span>
+                <a href="https://www.instagram.com/autoescolahabilitarmombaca/reel/DbIigFxuyt-/" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-rose-600 text-xs font-semibold flex items-center gap-1">
+                  <i class="fa-brands fa-instagram"></i> Ver Vídeo
+                </a>
+              </div>
+              <p class="text-slate-700 italic text-sm mb-6 leading-relaxed">
+                "Dia de exame prático e conquista realizada! Os instrutores da Habilitar dão toda a segurança e preparo com o micro-ônibus até o momento da prova do Detran."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 border-t border-slate-200 pt-4">
+              <div class="w-12 h-12 rounded-full bg-habilitar-royal text-white font-black flex items-center justify-center text-sm shadow">
+                LA
+              </div>
+              <div>
+                <h5 class="font-bold text-slate-900 text-sm">Lívia Alves</h5>
+                <span class="text-xs text-slate-500 font-medium">@livi.alvess • Mombaça - CE</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Depoimento Real 2: David Teixeira -->
+          <div class="p-7 rounded-3xl bg-slate-50 border-2 border-slate-100 shadow-sm flex flex-col justify-between hover:border-amber-300 transition-all">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-3 py-1 rounded-full bg-amber-100 text-habilitar-yellowHover font-bold text-xs">
+                  <i class="fa-solid fa-bus mr-1"></i> Aprovado Cat. D
+                </span>
+                <a href="https://www.instagram.com/autoescolahabilitarmombaca/reel/DbvxgzLO95K/" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-rose-600 text-xs font-semibold flex items-center gap-1">
+                  <i class="fa-brands fa-instagram"></i> Ver Vídeo
+                </a>
+              </div>
+              <p class="text-slate-700 italic text-sm mb-6 leading-relaxed">
+                "Mais um sonho conquistado com a Auto Escola Habilitar. Agradeço a toda a equipe pelo suporte em cada aula e pela paciência dos professores no percurso!"
+              </p>
+            </div>
+            <div class="flex items-center gap-3 border-t border-slate-200 pt-4">
+              <div class="w-12 h-12 rounded-full bg-habilitar-yellow text-habilitar-royalNavy font-black flex items-center justify-center text-sm shadow">
+                DT
+              </div>
+              <div>
+                <h5 class="font-bold text-slate-900 text-sm">David Teixeira</h5>
+                <span class="text-xs text-slate-500 font-medium">@davidteixeira_dt • Mombaça - CE</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Depoimento Real 3: José Arthur -->
+          <div class="p-7 rounded-3xl bg-slate-50 border-2 border-slate-100 shadow-sm flex flex-col justify-between hover:border-amber-300 transition-all">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 font-bold text-xs">
+                  <i class="fa-solid fa-car mr-1"></i> #CNHnaMão Cat. B
+                </span>
+                <a href="https://www.instagram.com/autoescolahabilitarmombaca/" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-rose-600 text-xs font-semibold flex items-center gap-1">
+                  <i class="fa-brands fa-instagram"></i> Ver Perfil
+                </a>
+              </div>
+              <p class="text-slate-700 italic text-sm mb-6 leading-relaxed">
+                "Treinando cada detalhe na baliza com os carros da Habilitar. Didática leve e treinamento certeiro pra não ter erro na hora da prova prática."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 border-t border-slate-200 pt-4">
+              <div class="w-12 h-12 rounded-full bg-emerald-600 text-white font-black flex items-center justify-center text-sm shadow">
+                JA
+              </div>
+              <div>
+                <h5 class="font-bold text-slate-900 text-sm">José Arthur</h5>
+                <span class="text-xs text-slate-500 font-medium">@josearthursmc_ • Mombaça - CE</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== FAQ ACORDEÃO ANIMADO E ACESSÍVEL ==================== -->
+    <section id="faq" class="py-16 md:py-24 bg-slate-100 border-t border-slate-200">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-12">
+          <span class="inline-block px-3 py-1 rounded-full bg-amber-100 text-habilitar-royalDark font-bold text-xs uppercase tracking-widest mb-3">
+            Tire Suas Dúvidas
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl font-black text-habilitar-royalNavy">
+            Perguntas Frequentes
+          </h2>
+          <p class="text-slate-600 mt-2 text-sm sm:text-base">
+            Tudo o que você precisa saber antes de iniciar seu processo no Detran-CE.
+          </p>
+        </div>
+
+        <div class="space-y-4" id="faqAccordion">
+          
+          <!-- Item 1 -->
+          <div class="faq-item bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+            <button class="faq-btn w-full px-6 py-4 text-left font-display font-bold text-slate-900 flex justify-between items-center hover:bg-amber-50/50 transition-colors"
+                    aria-expanded="false" aria-controls="faq-ans-1">
+              <span>Como funciona a aula no carro elétrico e automático?</span>
+              <i class="fa-solid fa-chevron-down text-habilitar-royal transition-transform duration-300"></i>
+            </button>
+            <div id="faq-ans-1" class="faq-grid-wrapper">
+              <div class="faq-inner-content px-6 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-3">
+                A Auto Escola Habilitar é a 1ª da região a oferecer treinamento prático em veículo 100% elétrico e automático! Proporciona maior facilidade no controle, ausência de pedal de embreagem e conforto máximo com ar-condicionado.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="faq-item bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+            <button class="faq-btn w-full px-6 py-4 text-left font-display font-bold text-slate-900 flex justify-between items-center hover:bg-amber-50/50 transition-colors"
+                    aria-expanded="false" aria-controls="faq-ans-2">
+              <span>Quais são os requisitos para tirar a Categoria D (ônibus/vans)?</span>
+              <i class="fa-solid fa-chevron-down text-habilitar-royal transition-transform duration-300"></i>
+            </button>
+            <div id="faq-ans-2" class="faq-grid-wrapper">
+              <div class="faq-inner-content px-6 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-3">
+                Para a Categoria D é necessário ter no mínimo 21 anos completos, estar habilitado há pelo menos 2 anos na Categoria B (ou 1 ano na Categoria C) e não ter cometido infrações graves ou gravíssimas nos últimos 12 meses.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="faq-item bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+            <button class="faq-btn w-full px-6 py-4 text-left font-display font-bold text-slate-900 flex justify-between items-center hover:bg-amber-50/50 transition-colors"
+                    aria-expanded="false" aria-controls="faq-ans-3">
+              <span>Posso parcelar no cartão de crédito?</span>
+              <i class="fa-solid fa-chevron-down text-habilitar-royal transition-transform duration-300"></i>
+            </button>
+            <div id="faq-ans-3" class="faq-grid-wrapper">
+              <div class="faq-inner-content px-6 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-3">
+                Sim! Parcelamos em até 10x ou 12x em todos os cartões de crédito e também temos opções facilitadas via Pix e planos de pagamento com entrada.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="faq-item bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+            <button class="faq-btn w-full px-6 py-4 text-left font-display font-bold text-slate-900 flex justify-between items-center hover:bg-amber-50/50 transition-colors"
+                    aria-expanded="false" aria-controls="faq-ans-4">
+              <span>Onde são realizadas as provas práticas do Detran?</span>
+              <i class="fa-solid fa-chevron-down text-habilitar-royal transition-transform duration-300"></i>
+            </button>
+            <div id="faq-ans-4" class="faq-grid-wrapper">
+              <div class="faq-inner-content px-6 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-3">
+                As bancas examinadoras do Detran-CE são acompanhadas de perto pela nossa equipe nas datas agendadas para a nossa região (como nas bancas de Mombaça e Tauá), com suporte total dos nossos instrutores.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== LOCALIZAÇÃO & CONTATO OFICIAL ==================== -->
+    <section id="contato" class="py-16 md:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          
+          <div>
+            <span class="inline-block px-3 py-1 rounded-full bg-amber-100 text-habilitar-royalDark font-bold text-xs uppercase tracking-widest mb-3">
+              Visite a Habilitar
+            </span>
+            <h2 class="font-display text-3xl sm:text-4xl font-black text-habilitar-royalNavy mb-6">
+              Venha nos conhecer na "Rua dos Cartórios"
+            </h2>
+            
+            <div class="space-y-6 text-slate-700">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-2xl bg-amber-100 text-habilitar-royal flex items-center justify-center flex-shrink-0 text-xl shadow-sm">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-slate-900">Endereço Oficial</h4>
+                  <p class="text-sm text-slate-600">Rua Antônio Evangelista Sobrinho, nº 117 – Centro</p>
+                  <p class="text-xs text-slate-500 font-semibold">(Conhecida popularmente como a Rua dos Cartórios) • Mombaça - CE</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0 text-xl shadow-sm">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-slate-900">WhatsApp Oficial</h4>
+                  <p class="text-sm text-slate-600 font-semibold">(88) 2154-0060</p>
+                  <p class="text-xs text-slate-500">Atendimento rápido da recepção para matrículas e turmas</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-2xl bg-blue-100 text-habilitar-royal flex items-center justify-center flex-shrink-0 text-xl shadow-sm">
+                  <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-slate-900">Instagram Oficial</h4>
+                  <a href="https://www.instagram.com/autoescolahabilitarmombaca/" target="_blank" rel="noopener noreferrer" class="text-sm text-habilitar-royal font-bold hover:underline">
+                    @autoescolahabilitarmombaca
+                  </a>
+                  <p class="text-xs text-slate-500">Acompanhe novidades, aprovações e dicas de trânsito</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <a href="https://wa.me/558821540060?text=Olá!%20Gostaria%20de%20falar%20com%20a%20recepção%20da%20Auto%20Escola%20Habilitar%20em%20Mombaça." 
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="inline-flex items-center gap-3 bg-habilitar-royal hover:bg-habilitar-royalDark text-white px-8 py-4 rounded-xl font-display font-extrabold shadow-lg transition-all">
+                <i class="fa-brands fa-whatsapp text-2xl text-emerald-400"></i>
+                <span>Chamar Recepção: (88) 2154-0060</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card de Localização com Rota -->
+          <div class="bg-gradient-to-br from-amber-100 to-amber-200 rounded-3xl p-6 border-2 border-amber-300 shadow-inner">
+            <div class="bg-white rounded-2xl p-8 shadow-sm flex flex-col items-center justify-center text-center min-h-[320px]">
+              <div class="w-16 h-16 rounded-2xl bg-habilitar-royal text-habilitar-yellow flex items-center justify-center text-3xl mb-4 shadow-md">
+                <i class="fa-solid fa-map-location-dot"></i>
+              </div>
+              <h3 class="font-display font-black text-xl text-habilitar-royalNavy mb-2">Localização Central e Acessível</h3>
+              <p class="text-slate-600 text-sm max-w-sm mb-6 leading-relaxed">
+                Estamos no Centro de Mombaça, na Rua dos Cartórios nº 117. Facilidade de acesso para você vir fazer suas aulas teóricas e práticas!
+              </p>
+              <a href="https://www.google.com/maps/search/?api=1&query=Auto+Escola+Habilitar+Mombaca+Ceara" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 class="px-6 py-3 bg-habilitar-royal hover:bg-habilitar-royalDark text-white rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2 shadow transition-all">
+                <i class="fa-solid fa-diamond-turn-right text-habilitar-yellow"></i>
+                <span>Abrir Rota no Google Maps</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== RODAPÉ OFICIAL ==================== -->
+  <footer class="bg-habilitar-royalNavy text-slate-300 py-12 border-t-4 border-habilitar-yellow text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+        
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-xl overflow-hidden bg-white p-0.5 border border-slate-700 shadow">
+            <img src="logo-habilitar.jpg" alt="Logo Auto Escola Habilitar" class="w-full h-full object-cover rounded-lg">
+          </div>
+          <div>
+            <span class="font-display font-black text-xl text-white">
+              HABILITAR<span class="text-habilitar-yellow">.</span>
+            </span>
+            <p class="text-xs text-slate-400 mt-0.5">
+              Transformando alunos em condutores confiantes! • Mombaça - Ceará.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 text-xl">
+          <a href="https://www.instagram.com/autoescolahabilitarmombaca/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:text-habilitar-yellow hover:bg-slate-700 transition-colors" aria-label="Instagram Oficial">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/558821540060?text=Olá!%20Gostaria%20de%20informações%20sobre%20a%20Auto%20Escola%20Habilitar." target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:text-emerald-400 hover:bg-slate-700 transition-colors" aria-label="WhatsApp Oficial">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="border-t border-slate-800/80 mt-8 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500 text-center sm:text-left">
+        <div>
+          &copy; <span id="currentYear"></span> Auto Escola Habilitar Mombaça. Todos os direitos reservados.
+        </div>
+        <div class="flex items-center justify-center gap-1.5 text-slate-400">
+          <span>Desenvolvido com excelência por</span>
+          <a href="https://studionextscale.com.br/" target="_blank" rel="noopener noreferrer" title="NextScale | Ideias em Soluções Digitais" class="font-bold text-slate-300 hover:text-white transition-colors inline-flex items-center gap-1.5 group">
+            <img src="logo-nextscale.svg" alt="Logo NextScale" class="w-4 h-4 group-hover:scale-110 transition-transform inline-block">
+            <span>NextScale</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== BOTÃO FLUTUANTE DO WHATSAPP COM OFFSET INTELIGENTE ==================== -->
+  <a href="https://wa.me/558821540060?text=Olá!%20Estou%20no%20site%20da%20Auto%20Escola%20Habilitar%20Mombaça%20e%20gostaria%20de%20informações." 
+     target="_blank" 
+     rel="noopener noreferrer"
+     id="floatingWhatsappBtn"
+     class="fixed bottom-6 right-6 z-30 bg-habilitar-whatsapp hover:bg-habilitar-whatsappHover text-white w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl btn-whatsapp-pulse transition-all hover:scale-110"
+     aria-label="Falar no WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Menu Mobile
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.toggle('hidden');
+      if (isHidden) {
+        menuIcon.classList.remove('fa-xmark');
+        menuIcon.classList.add('fa-bars');
+      } else {
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-xmark');
+      }
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('fa-xmark');
+        menuIcon.classList.add('fa-bars');
+      });
+    });
+
+    // Acordeão FAQ Suave com Grid CSS e ARIA
+    document.querySelectorAll('.faq-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const wrapper = button.nextElementSibling;
+        const icon = button.querySelector('i');
+        const isOpen = wrapper.classList.contains('is-open');
+
+        // Fecha todos os outros
+        document.querySelectorAll('.faq-grid-wrapper').forEach(w => w.classList.remove('is-open'));
+        document.querySelectorAll('.faq-btn').forEach(btn => {
+          btn.setAttribute('aria-expanded', 'false');
+          btn.querySelector('i').classList.remove('rotate-180');
+        });
+
+        // Alterna o atual
+        if (!isOpen) {
+          wrapper.classList.add('is-open');
+          button.setAttribute('aria-expanded', 'true');
+          icon.classList.add('rotate-180');
+        }
+      });
+    });
+
+    // Seleção de Categoria Dinâmica e Scroll Suave
+    function selectCategoryAndScroll(categoryName) {
+      const select = document.getElementById('leadCategory');
+      if (select) {
+        select.value = categoryName;
+        select.classList.add('ring-4', 'ring-amber-400');
+        setTimeout(() => select.classList.remove('ring-4', 'ring-amber-400'), 1500);
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      document.getElementById('leadName').focus();
+    }
+
+    // Máscara de Telefone Inteligente
+    const phoneInput = document.getElementById('leadPhone');
+    phoneInput.addEventListener('input', function(e) {
+      let v = e.target.value.replace(/\D/g, '');
+      if (v.length > 11) v = v.substring(0, 11);
+      if (v.length > 6) {
+        v = `(${v.substring(0, 2)}) ${v.substring(2, 7)}-${v.substring(7)}`;
+      } else if (v.length > 2) {
+        v = `(${v.substring(0, 2)}) ${v.substring(2)}`;
+      }
+      e.target.value = v;
+      document.getElementById('phoneError').classList.add('hidden');
+    });
+
+    // Validação Robusta e Envio para WhatsApp Oficial (88 2154-0060)
+    const leadForm = document.getElementById('leadForm');
+    leadForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const nameInput = document.getElementById('leadName');
+      const name = nameInput.value.trim();
+      const rawPhone = phoneInput.value.replace(/\D/g, '');
+      const category = document.getElementById('leadCategory').value;
+
+      let hasError = false;
+
+      // Validação de nome (pelo menos 3 caracteres)
+      if (name.length < 3) {
+        document.getElementById('nameError').classList.remove('hidden');
+        nameInput.focus();
+        hasError = true;
+      } else {
+        document.getElementById('nameError').classList.add('hidden');
+      }
+
+      // Validação de telefone (10 ou 11 dígitos com DDD)
+      if (rawPhone.length < 10) {
+        document.getElementById('phoneError').classList.remove('hidden');
+        if (!hasError) phoneInput.focus();
+        hasError = true;
+      } else {
+        document.getElementById('phoneError').classList.add('hidden');
+      }
+
+      if (hasError) return;
+
+      const officialPhone = '558821540060';
+      const formattedPhone = phoneInput.value;
+      const message = `Olá! Meu nome é *${name}* (${formattedPhone}). Vi o site da *Auto Escola Habilitar Mombaça* e gostaria de receber o orçamento para a CNH: *${category}*.`;
+
+      const whatsappUrl = `https://wa.me/${officialPhone}?text=${encodeURIComponent(message)}`;
+
+      // Exibe feedback amigável na tela
+      const feedback = document.getElementById('formSuccessFeedback');
+      const manualLink = document.getElementById('manualWhatsappLink');
+      if (feedback && manualLink) {
+        manualLink.href = whatsappUrl;
+        feedback.classList.remove('hidden');
+      }
+
+      // Abre WhatsApp
+      window.open(whatsappUrl, '_blank');
+    });
+  </script>
+</body>
+</html>

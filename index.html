@@ -494,24 +494,23 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           
           <!-- Depoimento Real 1: Lívia Alves -->
-          <div class="p-7 rounded-3xl bg-white border-2 border-slate-200 shadow-sm flex flex-col justify-between hover:border-habilitar-yellow transition-all">
+          <div class="p-7 rounded-3xl bg-white border-2 border-slate-200 shadow-sm flex flex-col justify-between hover:border-habilitar-yellow transition-all group">
             <div>
               <div class="flex items-center justify-between mb-4">
                 <span class="px-3 py-1 rounded-full bg-blue-100 text-habilitar-deep font-bold text-xs">
                   <i class="fa-solid fa-bus mr-1"></i> Aprovada Cat. D
                 </span>
-                <a href="https://www.instagram.com/autoescolahabilitarmombaca/reel/DbIigFxuyt-/" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-rose-600 text-xs font-semibold flex items-center gap-1">
-                  <i class="fa-brands fa-instagram"></i> Ver Vídeo
-                </a>
+                <button type="button" onclick="openVideoModal('DbIigFxuyt-', 'Lívia Alves', 'Categoria D (Ônibus)', 'Dia de exame prático e conquista realizada com a Auto Escola Habilitar!')" 
+                        class="px-3 py-1.5 rounded-full bg-rose-50 hover:bg-rose-100 text-rose-600 text-xs font-bold flex items-center gap-1.5 transition-colors cursor-pointer border border-rose-200">
+                  <i class="fa-solid fa-play text-[10px]"></i> Assistir Vídeo
+                </button>
               </div>
               <p class="text-slate-700 italic text-sm mb-6 leading-relaxed">
                 "Dia de exame prático e conquista realizada! Os instrutores da Habilitar dão toda a segurança e preparo com o ônibus até o momento da prova do Detran."
               </p>
             </div>
             <div class="flex items-center gap-3 border-t border-slate-200 pt-4">
-              <div class="w-12 h-12 rounded-full bg-habilitar-deep text-white font-black flex items-center justify-center text-sm shadow">
-                LA
-              </div>
+              <img src="avatar-livia.jpg" alt="Foto da aluna Lívia Alves aprovada na Auto Escola Habilitar" class="w-13 h-13 rounded-full object-cover border-2 border-habilitar-deep shadow-sm">
               <div>
                 <h5 class="font-bold text-slate-900 text-sm">Lívia Alves</h5>
                 <span class="text-xs text-slate-500 font-medium">@livi.alvess • Mombaça - CE</span>
@@ -520,24 +519,23 @@
           </div>
 
           <!-- Depoimento Real 2: David Teixeira -->
-          <div class="p-7 rounded-3xl bg-white border-2 border-slate-200 shadow-sm flex flex-col justify-between hover:border-habilitar-yellow transition-all">
+          <div class="p-7 rounded-3xl bg-white border-2 border-slate-200 shadow-sm flex flex-col justify-between hover:border-habilitar-yellow transition-all group">
             <div>
               <div class="flex items-center justify-between mb-4">
                 <span class="px-3 py-1 rounded-full bg-amber-100 text-habilitar-yellowHover font-bold text-xs">
                   <i class="fa-solid fa-bus mr-1"></i> Aprovado Cat. D
                 </span>
-                <a href="https://www.instagram.com/autoescolahabilitarmombaca/reel/DbvxgzLO95K/" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-rose-600 text-xs font-semibold flex items-center gap-1">
-                  <i class="fa-brands fa-instagram"></i> Ver Vídeo
-                </a>
+                <button type="button" onclick="openVideoModal('DbvxgzLO95K', 'David Teixeira', 'Categoria D (Ônibus)', 'Mais um sonho conquistado com a Auto Escola Habilitar!')" 
+                        class="px-3 py-1.5 rounded-full bg-rose-50 hover:bg-rose-100 text-rose-600 text-xs font-bold flex items-center gap-1.5 transition-colors cursor-pointer border border-rose-200">
+                  <i class="fa-solid fa-play text-[10px]"></i> Assistir Vídeo
+                </button>
               </div>
               <p class="text-slate-700 italic text-sm mb-6 leading-relaxed">
                 "Mais um sonho conquistado com a Auto Escola Habilitar. Agradeço a toda a equipe pelo suporte em cada aula e pela paciência dos professores no percurso!"
               </p>
             </div>
             <div class="flex items-center gap-3 border-t border-slate-200 pt-4">
-              <div class="w-12 h-12 rounded-full bg-habilitar-yellow text-habilitar-navy font-black flex items-center justify-center text-sm shadow">
-                DT
-              </div>
+              <img src="avatar-david.jpg" alt="Foto do aluno David Teixeira aprovado na Auto Escola Habilitar" class="w-13 h-13 rounded-full object-cover border-2 border-habilitar-yellow shadow-sm">
               <div>
                 <h5 class="font-bold text-slate-900 text-sm">David Teixeira</h5>
                 <span class="text-xs text-slate-500 font-medium">@davidteixeira_dt • Mombaça - CE</span>
@@ -546,7 +544,7 @@
           </div>
 
           <!-- Depoimento Real 3: José Arthur -->
-          <div class="p-7 rounded-3xl bg-white border-2 border-slate-200 shadow-sm flex flex-col justify-between hover:border-habilitar-yellow transition-all">
+          <div class="p-7 rounded-3xl bg-white border-2 border-slate-200 shadow-sm flex flex-col justify-between hover:border-habilitar-yellow transition-all group">
             <div>
               <div class="flex items-center justify-between mb-4">
                 <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 font-bold text-xs">
@@ -561,9 +559,7 @@
               </p>
             </div>
             <div class="flex items-center gap-3 border-t border-slate-200 pt-4">
-              <div class="w-12 h-12 rounded-full bg-emerald-600 text-white font-black flex items-center justify-center text-sm shadow">
-                JA
-              </div>
+              <img src="avatar-josearthur.jpg" alt="Foto do aluno José Arthur na Auto Escola Habilitar" class="w-13 h-13 rounded-full object-cover border-2 border-emerald-600 shadow-sm">
               <div>
                 <h5 class="font-bold text-slate-900 text-sm">José Arthur</h5>
                 <span class="text-xs text-slate-500 font-medium">@josearthursmc_ • Mombaça - CE</span>
@@ -922,6 +918,109 @@
 
       window.open(whatsappUrl, '_blank');
     });
+
+    // ==================== MODAL DE VÍDEO / DEPOIMENTOS ====================
+    const modalImageMap = {
+      'DbIigFxuyt-': 'depoimento-livia.png',
+      'DbvxgzLO95K': 'depoimento-david.png'
+    };
+
+    function openVideoModal(reelId, studentName, category, quote) {
+      const modal = document.getElementById('videoModal');
+      const titleEl = document.getElementById('modalStudentName');
+      const badgeEl = document.getElementById('modalCategoryBadge');
+      const quoteEl = document.getElementById('modalQuote');
+      const igLinkEl = document.getElementById('modalIgLink');
+      const ctaBtn = document.getElementById('modalCtaWhatsapp');
+      const previewImg = document.getElementById('modalPreviewImage');
+
+      if (titleEl) titleEl.textContent = studentName;
+      if (badgeEl) badgeEl.textContent = category;
+      if (quoteEl) quoteEl.textContent = `"${quote}"`;
+
+      const reelUrl = `https://www.instagram.com/reel/${reelId}/`;
+      if (igLinkEl) igLinkEl.href = reelUrl;
+
+      const imgSrc = modalImageMap[reelId] || 'depoimento-livia.png';
+      if (previewImg) {
+        previewImg.src = imgSrc;
+        previewImg.alt = `Depoimento em vídeo de ${studentName}`;
+      }
+
+      if (ctaBtn) {
+        const msg = `Olá! Vi o depoimento em vídeo de *${studentName}* (${category}) no site da Auto Escola Habilitar Mombaça e quero iniciar meu processo de habilitação!`;
+        ctaBtn.href = `https://wa.me/558821540060?text=${encodeURIComponent(msg)}`;
+      }
+
+      modal.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeVideoModal() {
+      const modal = document.getElementById('videoModal');
+      if (modal) {
+        modal.classList.add('hidden');
+      }
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    // Fechar ao pressionar ESC
+    window.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeVideoModal();
+      }
+    });
   </script>
+
+  <!-- ==================== MODAL LIGHTBOX DE VÍDEO DOS ALUNOS ==================== -->
+  <div id="videoModal" class="fixed inset-0 z-50 hidden bg-slate-950/85 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4 overflow-y-auto" onclick="if(event.target === this) closeVideoModal()">
+    <div class="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden my-auto animate-in fade-in zoom-in-95 duration-200">
+      
+      <!-- Topo Modal -->
+      <div class="flex items-center justify-between px-6 py-4 border-b border-slate-100 bg-slate-50">
+        <div class="flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-rose-500 animate-pulse"></span>
+          <span id="modalCategoryBadge" class="px-2.5 py-0.5 rounded-full bg-blue-100 text-habilitar-deep font-bold text-xs">
+            Categoria D (Ônibus)
+          </span>
+        </div>
+        <button type="button" onclick="closeVideoModal()" aria-label="Fechar janela" class="w-9 h-9 rounded-full bg-slate-200 hover:bg-slate-300 text-slate-700 flex items-center justify-center transition-colors cursor-pointer text-sm">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Corpo Modal: Player / Preview Oficial -->
+      <div class="p-6">
+        <div class="relative aspect-[9/13] max-h-[380px] w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-200 shadow-inner group">
+          <img id="modalPreviewImage" src="depoimento-livia.png" alt="Depoimento em vídeo do aluno" class="w-full h-full object-cover">
+          
+          <!-- Gradiente sobre o vídeo -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-5">
+            <h4 id="modalStudentName" class="text-white font-black text-xl drop-shadow mb-1">Lívia Alves</h4>
+            <p id="modalQuote" class="text-slate-200 text-xs italic drop-shadow line-clamp-3 mb-4">
+              "Dia de exame prático e conquista realizada com a Auto Escola Habilitar!"
+            </p>
+
+            <div class="flex items-center gap-2">
+              <a id="modalIgLink" href="https://www.instagram.com/autoescolahabilitarmombaca/" target="_blank" rel="noopener noreferrer" 
+                 class="flex-1 py-2.5 px-4 rounded-xl bg-gradient-to-r from-purple-600 via-rose-500 to-amber-500 hover:opacity-95 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md transition-transform hover:scale-[1.02]">
+                <i class="fa-brands fa-instagram text-base"></i> Assistir no Instagram
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA WhatsApp pós-vídeo -->
+        <div class="mt-5 pt-4 border-t border-slate-100 flex flex-col gap-2.5 text-center">
+          <p class="text-xs text-slate-600 font-medium">Inspirado nessa conquista? Venha ser o próximo habilitado:</p>
+          <a id="modalCtaWhatsapp" href="https://wa.me/558821540060" target="_blank" rel="noopener noreferrer"
+             class="w-full py-3 px-5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/25 transition-transform hover:scale-[1.01]">
+            <i class="fa-brands fa-whatsapp text-lg"></i> Quero Minha CNH com a Habilitar
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </body>
 </html>

@@ -920,9 +920,15 @@
     });
 
     // ==================== MODAL DE VÍDEO / DEPOIMENTOS ====================
-    const modalImageMap = {
-      'DbIigFxuyt-': 'depoimento-livia.png',
-      'DbvxgzLO95K': 'depoimento-david.png'
+    const modalVideoMap = {
+      'DbIigFxuyt-': {
+        video: 'video-livia.mp4',
+        poster: 'depoimento-livia.png'
+      },
+      'DbvxgzLO95K': {
+        video: 'video-david.mp4',
+        poster: 'depoimento-david.png'
+      }
     };
 
     function openVideoModal(reelId, studentName, category, quote) {
@@ -932,7 +938,8 @@
       const quoteEl = document.getElementById('modalQuote');
       const igLinkEl = document.getElementById('modalIgLink');
       const ctaBtn = document.getElementById('modalCtaWhatsapp');
-      const previewImg = document.getElementById('modalPreviewImage');
+      const videoPlayer = document.getElementById('modalVideoPlayer');
+      const videoSource = document.getElementById('modalVideoSource');
 
       if (titleEl) titleEl.textContent = studentName;
       if (badgeEl) badgeEl.textContent = category;
@@ -941,10 +948,18 @@
       const reelUrl = `https://www.instagram.com/reel/${reelId}/`;
       if (igLinkEl) igLinkEl.href = reelUrl;
 
-      const imgSrc = modalImageMap[reelId] || 'depoimento-livia.png';
-      if (previewImg) {
-        previewImg.src = imgSrc;
-        previewImg.alt = `Depoimento em vídeo de ${studentName}`;
+      const mediaData = modalVideoMap[reelId];
+      if (videoPlayer && videoSource && mediaData) {
+        videoPlayer.poster = mediaData.poster;
+        videoSource.src = mediaData.video;
+        videoPlayer.load();
+        // Iniciar play suavemente com som controlado pelo usuário
+        const playPromise = videoPlayer.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {
+            // Se autoplay bloqueado pelo navegador, aguarda clique do usuário nos controles
+          });
+        }
       }
 
       if (ctaBtn) {
@@ -958,6 +973,11 @@
 
     function closeVideoModal() {
       const modal = document.getElementById('videoModal');
+      const videoPlayer = document.getElementById('modalVideoPlayer');
+      if (videoPlayer) {
+        videoPlayer.pause();
+        videoPlayer.currentTime = 0;
+      }
       if (modal) {
         modal.classList.add('hidden');
       }
@@ -972,7 +992,7 @@
     });
   </script>
 
-  <!-- ==================== MODAL LIGHTBOX DE VÍDEO DOS ALUNOS ==================== -->
+  <!-- ==================== MODAL LIGHTBOX DE VÍDEO DOS ALUNOS COM PLAYER NATIVO ==================== -->
   <div id="videoModal" class="fixed inset-0 z-50 hidden bg-slate-950/85 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4 overflow-y-auto" onclick="if(event.target === this) closeVideoModal()">
     <div class="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden my-auto animate-in fade-in zoom-in-95 duration-200">
       
@@ -989,30 +1009,32 @@
         </button>
       </div>
 
-      <!-- Corpo Modal: Player / Preview Oficial -->
+      <!-- Corpo Modal: Player de Vídeo Nativo HTML5 -->
       <div class="p-6">
-        <div class="relative aspect-[9/13] max-h-[380px] w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-200 shadow-inner group">
-          <img id="modalPreviewImage" src="depoimento-livia.png" alt="Depoimento em vídeo do aluno" class="w-full h-full object-cover">
-          
-          <!-- Gradiente sobre o vídeo -->
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-5">
-            <h4 id="modalStudentName" class="text-white font-black text-xl drop-shadow mb-1">Lívia Alves</h4>
-            <p id="modalQuote" class="text-slate-200 text-xs italic drop-shadow line-clamp-3 mb-4">
-              "Dia de exame prático e conquista realizada com a Auto Escola Habilitar!"
-            </p>
+        <div class="relative aspect-[9/14] max-h-[420px] w-full rounded-2xl overflow-hidden bg-black border border-slate-800 shadow-inner flex items-center justify-center">
+          <video id="modalVideoPlayer" controls playsinline preload="metadata" class="w-full h-full object-contain">
+            <source id="modalVideoSource" src="" type="video/mp4">
+            Seu navegador não suporta reprodução de vídeos HTML5.
+          </video>
+        </div>
 
-            <div class="flex items-center gap-2">
-              <a id="modalIgLink" href="https://www.instagram.com/autoescolahabilitarmombaca/" target="_blank" rel="noopener noreferrer" 
-                 class="flex-1 py-2.5 px-4 rounded-xl bg-gradient-to-r from-purple-600 via-rose-500 to-amber-500 hover:opacity-95 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md transition-transform hover:scale-[1.02]">
-                <i class="fa-brands fa-instagram text-base"></i> Assistir no Instagram
-              </a>
-            </div>
+        <!-- Descrição do Aluno e Relato -->
+        <div class="mt-4 px-1">
+          <div class="flex items-center justify-between">
+            <h4 id="modalStudentName" class="text-slate-900 font-extrabold text-lg">Lívia Alves</h4>
+            <a id="modalIgLink" href="https://www.instagram.com/autoescolahabilitarmombaca/" target="_blank" rel="noopener noreferrer" 
+               class="text-xs font-semibold text-rose-600 hover:text-rose-700 flex items-center gap-1.5 transition-colors">
+              <i class="fa-brands fa-instagram text-sm"></i> Ver no Instagram
+            </a>
           </div>
+          <p id="modalQuote" class="text-slate-600 text-xs italic mt-1 leading-relaxed">
+            "Dia de exame prático e conquista realizada com a Auto Escola Habilitar!"
+          </p>
         </div>
 
         <!-- CTA WhatsApp pós-vídeo -->
-        <div class="mt-5 pt-4 border-t border-slate-100 flex flex-col gap-2.5 text-center">
-          <p class="text-xs text-slate-600 font-medium">Inspirado nessa conquista? Venha ser o próximo habilitado:</p>
+        <div class="mt-4 pt-3 border-t border-slate-100 flex flex-col gap-2 text-center">
+          <p class="text-xs text-slate-600 font-medium">Inspirado nessa aprovação? Seja o próximo habilitado:</p>
           <a id="modalCtaWhatsapp" href="https://wa.me/558821540060" target="_blank" rel="noopener noreferrer"
              class="w-full py-3 px-5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/25 transition-transform hover:scale-[1.01]">
             <i class="fa-brands fa-whatsapp text-lg"></i> Quero Minha CNH com a Habilitar
